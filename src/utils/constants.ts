@@ -1,0 +1,3 @@
+export const supabaseUrl = 'https://bztmsigpkntsnhfnfnml.supabase.co'
+export const supabaseKey =
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ6dG1zaWdwa250c25oZm5mbm1sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTEzNDk5OTIsImV4cCI6MjAyNjkyNTk5Mn0.PucpqhiF3Dj0k2CadK1GEMjrHVB_geLK188Uz245VMM'

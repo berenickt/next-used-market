@@ -1,0 +1,8 @@
+.aside {
+  // 1250px 이상일 떄는, 오른쪽에 15px 띄워준다.
+  @media (min-width: 1250px) {
+    right: -15px;
+  }
+  // 1250px 미만일 떄는, 오른쪽에 0px 띄워준다.
+  right: 0;
+}

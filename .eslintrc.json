@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "prettier", // Next.js에 Prettier 적용
+    "plugin:storybook/recommended"
+  ],
+	/**
+	 * @see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md
+	 */ 
+  "rules": {
+		// “Import/order “ ESLint Rule 설정
+    "import/order": [
+      "error",
+      {
+				// Import group 사이에 개행 항상 추가
+        "newlines-between": "always", 
+				// Import 순서는 알파벳 오름차순으로 정렬
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
+}
