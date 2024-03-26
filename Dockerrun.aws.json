@@ -1,7 +1,8 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "YOUR_NAME/jggt:latest",
+    "_NameDescription": "{Dockerhub 계정이름}/{Dockerhub 이미지 이름}:latest",
+    "Name": "seungwoo99/jggt:latest",
     "Update": "true"
   },
   "Ports": [

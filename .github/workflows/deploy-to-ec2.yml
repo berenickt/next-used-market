@@ -1,3 +1,4 @@
+# Github Node.js에서 설정해둔 양식으로 EC2에 배포하기
 name: Deploy To EC2
 
 on:

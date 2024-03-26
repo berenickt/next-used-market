@@ -2,7 +2,7 @@ name: Deploy To Elastic Beanstalk
 
 on:
   push:
-    brances: [main]
+    branches: [main]
 
 jobs:
   deploy:
@@ -20,6 +20,7 @@ jobs:
           push: true
           context: .
           file: ./Dockerfile
+          # ${{ secrets.DOCKERHUB_USERNAME }}/{Docker 이미지 이름}:latest
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/jggt:latest
       - name: Beanstalk Deploy
         uses: einaregilsson/beanstalk-deploy@v20
