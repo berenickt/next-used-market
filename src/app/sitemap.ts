@@ -13,9 +13,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     toPage: 2,
   })
 
-  const productsSitemap: MetadataRoute.Sitemap = products.map(product => ({
-    url: `${process.env.BASE_URL}/products/${product.id}`,
-    lastModified: dayjs(product.createdAt).toDate(),
+  const productsSitemap: MetadataRoute.Sitemap = products.map((product) => ({
+    url: `${process.env.BASE_URL}/products/${product.id}`, // 상품 상세 페이지로 이동
+    lastModified: dayjs(product.createdAt).toDate(), // createdAt을 lastModified로 사용
     changeFrequency: 'daily',
     priority: 0.7,
   }))
