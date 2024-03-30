@@ -5,7 +5,7 @@
 /* 토스트 UI 마크다운 뷰어 글꼴 크기 조정 */
 .tui--large .toastui-editor-contents {
   font-size: 1rem !important;
-  font-family: inherit !important;
+  font-family: inherit !important; /* 글꼴 상속 */
 }
 
 .material-symbols-outlined {

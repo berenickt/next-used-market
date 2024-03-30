@@ -19,6 +19,10 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
+/***
+ * @description Cypress에서 발생하는 uncaught exception을 무시
+ * @see https://docs.cypress.io/api/cypress-api/catalog-of-events#Uncaught-Exceptions
+ */
 Cypress.on('uncaught:exception', (err, runnable) => {
   // returning false here prevents Cypress from
   // failing the test

@@ -2,7 +2,7 @@ describe('메인페이지', () => {
   /*** (1)
    * @see https://docs.cypress.io/api/commands/visit
    * visit() : 원격 URL을 방문합니다.
-   * 
+   *
    * @see https://docs.cypress.io/api/commands/contains
    * contains() : 텍스트가 포함된 DOM 요소를 가져옵니다
    */
@@ -19,9 +19,11 @@ describe('메인페이지', () => {
   /*** (2)
    * @see https://docs.cypress.io/api/commands/wait
    * wait() : 다음 명령으로 넘어가기 전에 몇 밀리초 동안 기다리거나 별칭이 지정된 리소스가 해결될 때까지 기다립니다.
-   * 
+   *
    * @see https://docs.cypress.io/api/commands/click#__docusaurus_skipToContent_fallback
    * click() : DOM 요소를 클릭합니다.
+   *
+   * 2초 대기하는 이유는 페이지가 로딩되는 시간을 고려하기 위함
    */
   it('판매 페이지로 이동할 수 있어야 한다', () => {
     cy.visit('http://localhost:3000')
@@ -31,7 +33,7 @@ describe('메인페이지', () => {
   })
 
   /*** (3)
-   * 
+   *
    */
   it('내 상점 페이지로 이동할 수 있어야 한다', () => {
     cy.visit('http://localhost:3000')
@@ -43,7 +45,7 @@ describe('메인페이지', () => {
   })
 
   /*** (4)
-   * 
+   *
    */
   it('채팅 페이지로 이동할 수 있어야 한다', () => {
     cy.visit('http://localhost:3000')
@@ -67,10 +69,10 @@ describe('메인페이지', () => {
   /*** (6)
    * @see https://docs.cypress.io/api/commands/type
    * type() : DOM 요소에 입력합니다.
-   * 
+   *
    * @see https://docs.cypress.io/api/commands/url
    * next() : DOM 요소 집합 내에서 각 DOM 요소의 바로 다음 형제 요소를 가져옵니다.
-   * 
+   *
    * @see https://docs.cypress.io/api/commands/should#__docusaurus_skipToContent_fallback
    * should() : 어설션(의견)을 만듭니다. 어설션은 통과하거나 시간이 초과될 때까지 자동으로 다시 시도됨
    */
@@ -87,10 +89,10 @@ describe('메인페이지', () => {
   /*** (7)
    * @see https://docs.cypress.io/api/commands/clear
    * clear() : 입력 또는 텍스트 영역의 값을 지웁니다.
-   * 
+   *
    * @see https://docs.cypress.io/api/commands/parent
    * parent() : DOM 요소의 부모를 가져옵니다.
-   * 
+   *
    * @sees https://docs.cypress.io/api/commands/children#__docusaurus_skipToContent_fallback
    * children() : DOM 요소의 자식을 가져옵니다.
    */
@@ -106,7 +108,7 @@ describe('메인페이지', () => {
   })
 
   /*** (8)
-   * 
+   *
    */
   it('상점 검색 클릭시 상점 검색이 되어야 한다', () => {
     cy.visit('http://localhost:3000')

@@ -6,11 +6,9 @@ import { supabaseKey, supabaseUrl } from '../constants'
 /**
  * @description 서버환경(서버)에서 돌아가는 코드
  * @param cookieStore - 쿠키 저장소
- * @returns
+ * @see https://supabase.com/docs/guides/auth/server-side/creating-a-client?environment=server-component
  */
-export default function getServerComponentSupabase(
-  cookieStore: ReturnType<typeof cookies>,
-) {
+export default function getServerComponentSupabase(cookieStore: ReturnType<typeof cookies>) {
   const supabase = createServerClient(supabaseUrl, supabaseKey, {
     cookies: {
       get(name: string) {
