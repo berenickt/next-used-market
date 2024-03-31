@@ -8,6 +8,8 @@ const nextConfig = {
       },
     ],
   },
+  // Server Action (next13에서는 아직 experimental 기능)
+  // @see https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations#forms
   experimental: {
     serverActions: true,
   },
@@ -21,7 +23,9 @@ const nextConfig = {
 module.exports = nextConfig
 
 // Injected content via Sentry wizard below
-
+/***
+ * @description sentry 자동 설정
+ */
 const { withSentryConfig } = require('@sentry/nextjs')
 
 module.exports = withSentryConfig(
@@ -59,5 +63,5 @@ module.exports = withSentryConfig(
     // https://docs.sentry.io/product/crons/
     // https://vercel.com/docs/cron-jobs
     automaticVercelMonitors: true,
-  },
+  }
 )

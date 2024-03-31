@@ -1,18 +1,19 @@
 import { MetadataRoute } from 'next'
 
 /*** SEO(Search Engine Optimization) - (2)
- * `robots.ts` : 검색 엔진의 크롤러가 접근할 수 있는 페이지임을 명시적으로 표시하는 파일
+ * `robots.ts` : 앱에서 검색엔진 크롤러가 어떻게 동작해야 하는지를 정리한 파일
+ * @see https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots#generate-a-robots-file
  */
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: '*',
-        allow: '/',
+        userAgent: '*', // 모든 유저 에이전트 크롤러 허용
+        allow: '/', // 모든 페이지 허용
       },
       {
-        userAgent: 'sample_user_agent',
-        disallow: '/private',
+        userAgent: 'sample_user_agent', // 특정 유저 에이전트(sample_user_agent)를 가진 크롤러는
+        disallow: '/private', // 특정 페이지 (private 페이지) 차단
       },
     ],
   }

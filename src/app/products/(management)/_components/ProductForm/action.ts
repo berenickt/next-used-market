@@ -9,14 +9,13 @@ import getServerComponentSupabase from '@/utils/supabase/getServerComponentSupab
 
 /** (1)
  * @description 상품 생성
+ * Server Action (next13에서는 아직 experimental 기능)
+ * @see https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations#forms
  * @param previousState
  * @param formData
  * @returns
  */
-export async function createProductAction(
-  previousState: unknown,
-  formData: FormData,
-) {
+export async function createProductAction(previousState: unknown, formData: FormData) {
   const cookieStore = cookies()
   const supabase = getServerComponentSupabase(cookieStore)
 
@@ -56,8 +55,7 @@ export async function createProductAction(
   } catch (e: unknown) {
     return {
       status: 'error',
-      errorMessage:
-        (e instanceof Error && e.message) || '알 수 없는 에러가 발생했습니다.',
+      errorMessage: (e instanceof Error && e.message) || '알 수 없는 에러가 발생했습니다.',
     }
   }
 }
@@ -68,10 +66,7 @@ export async function createProductAction(
  * @param formData
  * @returns
  */
-export async function updateProductAction(
-  previousState: unknown,
-  formData: FormData,
-) {
+export async function updateProductAction(previousState: unknown, formData: FormData) {
   const cookieStore = cookies()
   const supabase = getServerComponentSupabase(cookieStore)
 
@@ -113,8 +108,7 @@ export async function updateProductAction(
   } catch (e: unknown) {
     return {
       status: 'error',
-      errorMessage:
-        (e instanceof Error && e.message) || '알 수 없는 에러가 발생했습니다.',
+      errorMessage: (e instanceof Error && e.message) || '알 수 없는 에러가 발생했습니다.',
     }
   } finally {
     revalidateTag('product')

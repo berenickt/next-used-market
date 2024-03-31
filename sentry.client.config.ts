@@ -4,6 +4,13 @@
 
 import * as Sentry from '@sentry/nextjs'
 
+/*** sentry
+ * @see https://docs.sentry.io/platforms/javascript/guides/nextjs/
+ * 애플리케이션에서 발생한 에러를 추적하는데 사용되는 서비스
+ * 에러가 발생하면, `이메일/ Slack` 등으로 메일을 보내줌
+ * 사용자가 발생한 에러를 확인하고, 브라우저 환경, 장치, 브라우저 버전 등을 확인할 수 있음
+ * sentry 자동 설정
+ */
 Sentry.init({
   dsn: 'https://d19d3d72f7a783cfcb4f87dcba04153e@o4506495232245760.ingest.sentry.io/4506570667851776',
 
